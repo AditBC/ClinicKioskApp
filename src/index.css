@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #008080; /* Teal accent */
+}
+
+button {
+  background-color: #008080; /* Teal accent */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px; /* Larger font size */
+  margin: 10px; /* Increased margin */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+button:hover {
+  background-color: #006666; /* Darker teal on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Max width for larger screens */
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #008080; /* Teal border */
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #006666; /* Darker teal on focus */
+}
+
+.container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden for animation */
+  animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.queue-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #008080;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
